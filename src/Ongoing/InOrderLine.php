@@ -96,6 +96,31 @@ class InOrderLine
     protected $Items = null;
 
     /**
+     * @var string $ProductCode
+     */
+    protected $ProductCode = null;
+
+    /**
+     * @var ArticleDefinition $ArticleDef
+     */
+    protected $ArticleDef = null;
+
+    /**
+     * @var float $InOrderLineFreeDecimal1
+     */
+    protected $InOrderLineFreeDecimal1 = null;
+
+    /**
+     * @var \DateTime $InOrderLineFreeDateTime1
+     */
+    protected $InOrderLineFreeDateTime1 = null;
+
+    /**
+     * @var InOrderLineType $InOrderLineType
+     */
+    protected $InOrderLineType = null;
+
+    /**
      * @param OrderLineIdentificationType $OrderLineIdentification
      * @param ArticleIdentificationType $ArticleIdentification
      * @param int $OrderLineSystemId
@@ -445,6 +470,108 @@ class InOrderLine
     {
       $this->Items = $Items;
       return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProductCode()
+    {
+        return $this->ProductCode;
+    }
+
+    /**
+     * @param string $ProductCode
+     * @return \Ongoing\InOrderLine
+     */
+    public function setProductCode($ProductCode)
+    {
+        $this->ProductCode = $ProductCode;
+        return $this;
+    }
+
+    /**
+     * @return ArticleDefinition
+     */
+    public function getArticleDef()
+    {
+        return $this->ArticleDef;
+    }
+
+    /**
+     * @param ArticleDefinition $ArticleDef
+     * @return \Ongoing\InOrderLine
+     */
+    public function setArticleDef($ArticleDef)
+    {
+        $this->ArticleDef = $ArticleDef;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getInOrderLineFreeDecimal1()
+    {
+        return $this->InOrderLineFreeDecimal1;
+    }
+
+    /**
+     * @param float $InOrderLineFreeDecimal1
+     * @return \Ongoing\InOrderLine
+     */
+    public function setInOrderLineFreeDecimal1($InOrderLineFreeDecimal1)
+    {
+        $this->InOrderLineFreeDecimal1 = $InOrderLineFreeDecimal1;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getInOrderLineFreeDateTime1()
+    {
+        if ($this->InOrderLineFreeDateTime1 == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->InOrderLineFreeDateTime1);
+            } catch (\Exception $e) {
+                return false;
+            }
+        }
+    }
+
+    /**
+     * @param \DateTime $InOrderLineFreeDateTime1
+     * @return \Ongoing\InOrderLine
+     */
+    public function setInOrderLineFreeDateTime1(\DateTime $InOrderLineFreeDateTime1 = null)
+    {
+        if ($InOrderLineFreeDateTime1 == null) {
+            $this->InOrderLineFreeDateTime1 = null;
+        } else {
+            $this->InOrderLineFreeDateTime1 = $InOrderLineFreeDateTime1->format(\DateTime::ATOM);
+        }
+        return $this;
+    }
+
+    /**
+     * @return InOrderLineType
+     */
+    public function getInOrderLineType()
+    {
+        return $this->InOrderLineType;
+    }
+
+    /**
+     * @param InOrderLineType $InOrderLineType
+     * @return \Ongoing\InOrderLine
+     */
+    public function setInOrderLineType($InOrderLineType)
+    {
+        $this->InOrderLineType = $InOrderLineType;
+        return $this;
     }
 
 }

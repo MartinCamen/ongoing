@@ -146,6 +146,26 @@ class CustomerOrderLine
     protected $OrderLineArticleItemStatus = null;
 
     /**
+     * @var float $OrderLineWeight
+     */
+    protected $OrderLineWeight = null;
+
+    /**
+     * @var string $CustomerArticleNumber
+     */
+    protected $CustomerArticleNumber = null;
+
+    /**
+     * @var boolean $ForcePickFullItems
+     */
+    protected $ForcePickFullItems = null;
+
+    /**
+     * @var ArrayOfCustomerOrderLineArticleItem $Items
+     */
+    protected $Items = null;
+
+    /**
      * @param OrderLineIdentificationType $OrderLineIdentification
      * @param ArticleIdentificationType $ArticleIdentification
      * @param float $NumberOfItems
@@ -671,6 +691,78 @@ class CustomerOrderLine
     {
       $this->OrderLineArticleItemStatus = $OrderLineArticleItemStatus;
       return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getOrderLineWeight()
+    {
+        return $this->OrderLineWeight;
+    }
+
+    /**
+     * @param float $OrderLineWeight
+     * @return \Ongoing\CustomerOrderLine
+     */
+    public function setOrderLineWeight($OrderLineWeight)
+    {
+        $this->OrderLineWeight = $OrderLineWeight;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCustomerArticleNumber()
+    {
+        return $this->CustomerArticleNumber;
+    }
+
+    /**
+     * @param string $CustomerArticleNumber
+     * @return \Ongoing\CustomerOrderLine
+     */
+    public function setCustomerArticleNumber($CustomerArticleNumber)
+    {
+        $this->CustomerArticleNumber = $CustomerArticleNumber;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getForcePickFullItems()
+    {
+        return $this->ForcePickFullItems;
+    }
+
+    /**
+     * @param boolean $ForcePickFullItems
+     * @return \Ongoing\CustomerOrderLine
+     */
+    public function setForcePickFullItems($ForcePickFullItems)
+    {
+        $this->ForcePickFullItems = $ForcePickFullItems;
+        return $this;
+    }
+
+    /**
+     * @return ArrayOfCustomerOrderLineArticleItem
+     */
+    public function getItems()
+    {
+        return $this->Items;
+    }
+
+    /**
+     * @param ArrayOfCustomerOrderLineArticleItem $Items
+     * @return \Ongoing\CustomerOrderLine
+     */
+    public function setItems($Items)
+    {
+        $this->Items = $Items;
+        return $this;
     }
 
 }
