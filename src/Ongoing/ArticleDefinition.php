@@ -191,6 +191,91 @@ class ArticleDefinition
     protected $LinkToPicture = null;
 
     /**
+     * @var string $BarCodePallet
+     */
+    protected $BarCodePallet = null;
+
+    /**
+     * @var int $QuantityPerLayer
+     */
+    protected $QuantityPerLayer = null;
+
+    /**
+     * @var float $PalletHeight
+     */
+    protected $PalletHeight = null;
+
+    /**
+     * @var TaricNumbers $TaricNumbers
+     */
+    protected $TaricNumbers = null;
+
+    /**
+     * @var boolean $IsObsolete
+     */
+    protected $IsObsolete = null;
+
+    /**
+     * @var int $MinDaysToExpiryDate
+     */
+    protected $MinDaysToExpiryDate = null;
+
+    /**
+     * @var string $AdditionalStatisticsNumber
+     */
+    protected $AdditionalStatisticsNumber = null;
+
+    /**
+     * @var string $CustomsExportConditions
+     */
+    protected $CustomsExportConditions = null;
+
+    /**
+     * @var ArticleColor $ArticleColor
+     */
+    protected $ArticleColor = null;
+
+    /**
+     * @var ArticleSize $ArticleSize
+     */
+    protected $ArticleSize = null;
+
+    /**
+     * @var boolean $IsSerialNumberArticle
+     */
+    protected $IsSerialNumberArticle = null;
+
+    /**
+     * @var boolean $IsBatchArticle
+     */
+    protected $IsBatchArticle = null;
+
+    /**
+     * @var ArticleDefinitionClasses $ArticleDefinitionClasses
+     */
+    protected $ArticleDefinitionClasses = null;
+
+    /**
+     * @var float $ArticleFreeDecimal1
+     */
+    protected $ArticleFreeDecimal1 = null;
+
+    /**
+     * @var float $ArticleFreeDecimal2
+     */
+    protected $ArticleFreeDecimal2 = null;
+
+    /**
+     * @var int $ArticleStoragePriority
+     */
+    protected $ArticleStoragePriority = null;
+
+    /**
+     * @var float $SubQuantityPerItem
+     */
+    protected $SubQuantityPerItem = null;
+
+    /**
      * @param ArticleOperation $ArticleOperation
      * @param ArticleIdentificationType $ArticleIdentification
      */
@@ -864,6 +949,312 @@ class ArticleDefinition
     {
       $this->LinkToPicture = $LinkToPicture;
       return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBarCodePallet()
+    {
+        return $this->BarCodePallet;
+    }
+
+    /**
+     * @param string $BarCodePallet
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setBarCodePallet($BarCodePallet)
+    {
+        $this->BarCodePallet = $BarCodePallet;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getQuantityPerLayer()
+    {
+        return $this->QuantityPerLayer;
+    }
+
+    /**
+     * @param int $QuantityPerLayer
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setQuantityPerLayer($QuantityPerLayer)
+    {
+        $this->QuantityPerLayer = $QuantityPerLayer;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPalletHeight()
+    {
+        return $this->PalletHeight;
+    }
+
+    /**
+     * @param float $PalletHeight
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setPalletHeight($PalletHeight)
+    {
+        $this->PalletHeight = $PalletHeight;
+        return $this;
+    }
+
+    /**
+     * @return TaricNumbers
+     */
+    public function getTaricNumbers()
+    {
+        return $this->TaricNumbers;
+    }
+
+    /**
+     * @param TaricNumbers $TaricNumbers
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setTaricNumbers($TaricNumbers)
+    {
+        $this->TaricNumbers = $TaricNumbers;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsObsolete()
+    {
+        return $this->IsObsolete;
+    }
+
+    /**
+     * @param boolean $IsObsolete
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setIsObsolete($IsObsolete)
+    {
+        $this->IsObsolete = $IsObsolete;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMinDaysToExpiryDate()
+    {
+        return $this->MinDaysToExpiryDate;
+    }
+
+    /**
+     * @param int $MinDaysToExpiryDate
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setMinDaysToExpiryDate($MinDaysToExpiryDate)
+    {
+        $this->MinDaysToExpiryDate = $MinDaysToExpiryDate;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdditionalStatisticsNumber()
+    {
+        return $this->AdditionalStatisticsNumber;
+    }
+
+    /**
+     * @param string $AdditionalStatisticsNumber
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setAdditionalStatisticsNumber($AdditionalStatisticsNumber)
+    {
+        $this->AdditionalStatisticsNumber = $AdditionalStatisticsNumber;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCustomsExportConditions()
+    {
+        return $this->CustomsExportConditions;
+    }
+
+    /**
+     * @param string $CustomsExportConditions
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setCustomsExportConditions($CustomsExportConditions)
+    {
+        $this->CustomsExportConditions = $CustomsExportConditions;
+        return $this;
+    }
+
+    /**
+     * @return ArticleColor
+     */
+    public function getArticleColor()
+    {
+        return $this->ArticleColor;
+    }
+
+    /**
+     * @param ArticleColor $ArticleColor
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setArticleColor($ArticleColor)
+    {
+        $this->ArticleColor = $ArticleColor;
+        return $this;
+    }
+
+    /**
+     * @return ArticleSize
+     */
+    public function getArticleSize()
+    {
+        return $this->ArticleSize;
+    }
+
+    /**
+     * @param ArticleSize $ArticleSize
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setArticleSize($ArticleSize)
+    {
+        $this->ArticleSize = $ArticleSize;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsSerialNumberArticle()
+    {
+        return $this->IsSerialNumberArticle;
+    }
+
+    /**
+     * @param boolean $IsSerialNumberArticle
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setIsSerialNumberArticle($IsSerialNumberArticle)
+    {
+        $this->IsSerialNumberArticle = $IsSerialNumberArticle;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsBatchArticle()
+    {
+        return $this->IsBatchArticle;
+    }
+
+    /**
+     * @param boolean $IsBatchArticle
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setIsBatchArticle($IsBatchArticle)
+    {
+        $this->IsBatchArticle = $IsBatchArticle;
+        return $this;
+    }
+
+    /**
+     * @return ArticleDefinitionClasses
+     */
+    public function getArticleDefinitionClasses()
+    {
+        return $this->ArticleDefinitionClasses;
+    }
+
+    /**
+     * @param ArticleDefinitionClasses $ArticleDefinitionClasses
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setArticleDefinitionClasses($ArticleDefinitionClasses)
+    {
+        $this->ArticleDefinitionClasses = $ArticleDefinitionClasses;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getArticleFreeDecimal1()
+    {
+        return $this->ArticleFreeDecimal1;
+    }
+
+    /**
+     * @param float $ArticleFreeDecimal1
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setArticleFreeDecimal1($ArticleFreeDecimal1)
+    {
+        $this->ArticleFreeDecimal1 = $ArticleFreeDecimal1;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getArticleFreeDecimal2()
+    {
+        return $this->ArticleFreeDecimal2;
+    }
+
+    /**
+     * @param float $ArticleFreeDecimal2
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setArticleFreeDecimal2($ArticleFreeDecimal2)
+    {
+        $this->ArticleFreeDecimal2 = $ArticleFreeDecimal2;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getArticleStoragePriority()
+    {
+        return $this->ArticleStoragePriority;
+    }
+
+    /**
+     * @param int $ArticleStoragePriority
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setArticleStoragePriority($ArticleStoragePriority)
+    {
+        $this->ArticleStoragePriority = $ArticleStoragePriority;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getSubQuantityPerItem()
+    {
+        return $this->SubQuantityPerItem;
+    }
+
+    /**
+     * @param float $SubQuantityPerItem
+     * @return \Ongoing\ArticleDefinition
+     */
+    public function setSubQuantityPerItem($SubQuantityPerItem)
+    {
+        $this->SubQuantityPerItem = $SubQuantityPerItem;
+        return $this;
     }
 
 }
