@@ -111,6 +111,61 @@ class InOrderInfoClass
     protected $TermsOfDeliveryType = null;
 
     /**
+     * @var string $FreeText1
+     */
+    protected $FreeText1 = null;
+
+    /**
+     * @var string $FreeText2
+     */
+    protected $FreeText2 = null;
+
+    /**
+     * @var string $FreeText3
+     */
+    protected $FreeText3 = null;
+
+    /**
+     * @var string $FreeText4
+     */
+    protected $FreeText4 = null;
+
+    /**
+     * @var string $FreeText5
+     */
+    protected $FreeText5 = null;
+
+    /**
+     * @var InOrderWarehouse $Warehouse
+     */
+    protected $Warehouse = null;
+
+    /**
+     * @var \DateTime $CustomsDeclaredDate
+     */
+    protected $CustomsDeclaredDate = null;
+
+    /**
+     * @var float $InOrderFreeDecimal1
+     */
+    protected $InOrderFreeDecimal1 = null;
+
+    /**
+     * @var float $InOrderFreeDecimal2
+     */
+    protected $InOrderFreeDecimal2 = null;
+
+    /**
+     * @var boolean $InOrderFreeBool1
+     */
+    protected $InOrderFreeBool1 = null;
+
+    /**
+     * @var boolean $InOrderFreeBool2
+     */
+    protected $InOrderFreeBool2 = null;
+
+    /**
      * @param InOrderIdentificationType $InOrderIdentification
      * @param InOrderOperation $InOrderOperation
      * @param int $InOrderId
@@ -528,6 +583,216 @@ class InOrderInfoClass
     {
       $this->TermsOfDeliveryType = $TermsOfDeliveryType;
       return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFreeText1()
+    {
+        return $this->FreeText1;
+    }
+
+    /**
+     * @param string $FreeText1
+     * @return \Ongoing\InOrderInfoClass
+     */
+    public function setFreeText1($FreeText1)
+    {
+        $this->FreeText1 = $FreeText1;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFreeText2()
+    {
+        return $this->FreeText2;
+    }
+
+    /**
+     * @param string $FreeText2
+     * @return \Ongoing\InOrderInfoClass
+     */
+    public function setFreeText2($FreeText2)
+    {
+        $this->FreeText2 = $FreeText2;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFreeText3()
+    {
+        return $this->FreeText3;
+    }
+
+    /**
+     * @param string $FreeText3
+     * @return \Ongoing\InOrderInfoClass
+     */
+    public function setFreeText3($FreeText3)
+    {
+        $this->FreeText3 = $FreeText3;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFreeText4()
+    {
+        return $this->FreeText4;
+    }
+
+    /**
+     * @param string $FreeText4
+     * @return \Ongoing\InOrderInfoClass
+     */
+    public function setFreeText4($FreeText4)
+    {
+        $this->FreeText4 = $FreeText4;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFreeText5()
+    {
+        return $this->FreeText5;
+    }
+
+    /**
+     * @param string $FreeText5
+     * @return \Ongoing\InOrderInfoClass
+     */
+    public function setFreeText5($FreeText5)
+    {
+        $this->FreeText5 = $FreeText5;
+        return $this;
+    }
+
+    /**
+     * @return InOrderWarehouse
+     */
+    public function getWarehouse()
+    {
+        return $this->Warehouse;
+    }
+
+    /**
+     * @param InOrderWarehouse $Warehouse
+     * @return \Ongoing\InOrderInfoClass
+     */
+    public function setWarehouse($Warehouse)
+    {
+        $this->Warehouse = $Warehouse;
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCustomsDeclaredDate()
+    {
+        if ($this->CustomsDeclaredDate == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->CustomsDeclaredDate);
+            } catch (\Exception $e) {
+                return false;
+            }
+        }
+    }
+
+    /**
+     * @param \DateTime $CustomsDeclaredDate
+     * @return \Ongoing\InOrderInfoClass
+     */
+    public function setCustomsDeclaredDate(\DateTime $CustomsDeclaredDate = null)
+    {
+        if ($CustomsDeclaredDate == null) {
+            $this->CustomsDeclaredDate = null;
+        } else {
+            $this->CustomsDeclaredDate = $CustomsDeclaredDate->format(\DateTime::ATOM);
+        }
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getInOrderFreeDecimal1()
+    {
+        return $this->InOrderFreeDecimal1;
+    }
+
+    /**
+     * @param float $InOrderFreeDecimal1
+     * @return \Ongoing\InOrderInfoClass
+     */
+    public function setInOrderFreeDecimal1($InOrderFreeDecimal1)
+    {
+        $this->InOrderFreeDecimal1 = $InOrderFreeDecimal1;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getInOrderFreeDecimal2()
+    {
+        return $this->InOrderFreeDecimal2;
+    }
+
+    /**
+     * @param float $InOrderFreeDecimal2
+     * @return \Ongoing\InOrderInfoClass
+     */
+    public function setInOrderFreeDecimal2($InOrderFreeDecimal2)
+    {
+        $this->InOrderFreeDecimal2 = $InOrderFreeDecimal2;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getInOrderFreeBool1()
+    {
+        return $this->InOrderFreeBool1;
+    }
+
+    /**
+     * @param boolean $InOrderFreeBool1
+     * @return \Ongoing\InOrderInfoClass
+     */
+    public function setInOrderFreeBool1($InOrderFreeBool1)
+    {
+        $this->InOrderFreeBool1 = $InOrderFreeBool1;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getInOrderFreeBool2()
+    {
+        return $this->InOrderFreeBool2;
+    }
+
+    /**
+     * @param boolean $InOrderFreeBool2
+     * @return \Ongoing\InOrderInfoClass
+     */
+    public function setInOrderFreeBool2($InOrderFreeBool2)
+    {
+        $this->InOrderFreeBool2 = $InOrderFreeBool2;
+        return $this;
     }
 
 }
