@@ -186,6 +186,36 @@ class OrderInfoClass
     protected $OrderServicePointCode = null;
 
     /**
+     * @var string $FreeText1
+     */
+    protected $FreeText1 = null;
+
+    /**
+     * @var string $FreeText2
+     */
+    protected $FreeText2 = null;
+
+    /**
+     * @var string $FreeText3
+     */
+    protected $FreeText3 = null;
+
+    /**
+     * @var string $MarketPlace
+     */
+    protected $MarketPlace = null;
+
+    /**
+     * @var string $MarketPlaceOrderNumber
+     */
+    protected $MarketPlaceOrderNumber = null;
+
+    /**
+     * @var OrderCustoms $Customs
+     */
+    protected $Customs = null;
+
+    /**
      * @param OrderIdentificationType $OrderIdentification
      * @param OrderOperation $OrderOperation
      * @param int $OrderId
@@ -879,4 +909,111 @@ class OrderInfoClass
       return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getFreeText1()
+    {
+        return $this->FreeText1;
+    }
+
+    /**
+     * @param string $FreeText1
+     * @return \Ongoing\OrderInfoClass
+     */
+    public function setFreeText1($FreeText1)
+    {
+        $this->FreeText1 = $FreeText1;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFreeText2()
+    {
+        return $this->FreeText2;
+    }
+
+    /**
+     * @param string $FreeText2
+     * @return \Ongoing\OrderInfoClass
+     */
+    public function setFreeText2($FreeText2)
+    {
+        $this->FreeText2 = $FreeText2;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFreeText3()
+    {
+        return $this->FreeText3;
+    }
+
+    /**
+     * @param string $FreeText3
+     * @return \Ongoing\OrderInfoClass
+     */
+    public function setFreeText3($FreeText3)
+    {
+        $this->FreeText3 = $FreeText3;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMarketPlace()
+    {
+        return $this->MarketPlace;
+    }
+
+    /**
+     * @param string $MarketPlace
+     * @return \Ongoing\OrderInfoClass
+     */
+    public function setMarketPlace($MarketPlace)
+    {
+        $this->MarketPlace = $MarketPlace;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMarketPlaceOrderNumber()
+    {
+        return $this->MarketPlaceOrderNumber;
+    }
+
+    /**
+     * @param string $MarketPlaceOrderNumber
+     * @return \Ongoing\OrderInfoClass
+     */
+    public function setMarketPlaceOrderNumber($MarketPlaceOrderNumber)
+    {
+        $this->MarketPlaceOrderNumber = $MarketPlaceOrderNumber;
+        return $this;
+    }
+
+    /**
+     * @return OrderCustoms
+     */
+    public function getCustoms()
+    {
+        return $this->Customs;
+    }
+
+    /**
+     * @param OrderCustoms $Customs
+     * @return \Ongoing\OrderInfoClass
+     */
+    public function setCustoms($Customs)
+    {
+        $this->Customs = $Customs;
+        return $this;
+    }
 }
